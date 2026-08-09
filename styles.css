@@ -1,2 +1,55 @@
+/* Container rules */
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 620px; 
+  gap: 4px;
+}
 
-/* Your CSS Code here. */
+/* Individual box base styles */
+.flex-wrap > div {
+  width: 100px;
+  height: 100px;
+  font-family: 'Times New Roman', serif;
+  font-size: 48px;
+  color: #000000;
+  box-sizing: border-box;
+  padding-left: 4px;
+}
+
+/* Color assignments matching your image */
+.item-1 { background-color: #ff0000; } /* Red */
+.item-2 { background-color: #0000ff; } /* Blue */
+.item-3, .item-4, .item-5, .item-6, .item-7 { background-color: #007f00; } /* Green */
+
+/* Reordering items visually */
+.flex-wrap .item-3 { order: 1; } /* Displays 1st */
+.flex-wrap .item-4 { order: 2; } /* Displays 2nd */
+.flex-wrap .item-5 { order: 3; } /* Displays 3rd */
+.flex-wrap .item-6 { order: 4; } /* Displays 4th */
+.flex-wrap .item-7 { order: 5; } /* Displays 5th */
+.flex-wrap .item-1 { order: 6; } /* Displays 6th */
+.flex-wrap .item-2 { order: 7; } /* Displays 7th (wraps to row 2) */
+
+/* Hiding or resetting the unused placeholder holder container */
+.holder {
+  display: flex;
+  flex-wrap: wrap;
+  width: 620px; 
+  gap: 4px;
+}
+
+.holder > div {
+  width: 100px;
+  height: 100px;
+  font-family: 'Times New Roman', serif;
+  font-size: 48px;
+  color: #000000;
+  box-sizing: border-box;
+  padding-left: 4px;
+}
+
+.holder.item-3 { order: 3; } /* Displays 1st */
+.holder.item-4 { order: 1; } /* Displays 2nd */
+.fholder.item-5 { order: 2; } /* Displays 3rd */
+
